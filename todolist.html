@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      padding-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      width: 300px;
+
+      padding: 20px;
+      border-radius: 10px;
+      background-color: rgba(128, 128, 128, 0.412);
+    }
+    .container form {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+    .container form input {
+      border: none;
+      outline: none;
+      width: 80%;
+      padding: 8px;
+    }
+    .container .add {
+      width: 20%;
+      padding: 10px;
+      color: black;
+      font-size: 10px;
+      border: none;
+      outline: none;
+      background-color: yellow;
+    }
+    .container .list-container {
+      list-style-type: none;
+      margin-top: 10px;
+    }
+    li.completed {
+      opacity: 0.5;
+      font-style: italic;
+    }
+    li.completed i {
+      color: gray;
+    }
+    .container .list-container li {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 8px;
+      border-bottom: 1px solid black;
+      margin-top: 10px;
+    }
+    .container .list-container li i {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background-color: yellow;
+      color: gray;
+      font-size: 10px;
+    }
+    .container .count-item {
+      margin-top: 30px;
+      font-size: 15px;
+    }
+
+    .container .clear {
+      margin-top: 10px;
+      width: 100%;
+      padding: 8px;
+      border: none;
+      outline: none;
+      background-color: rgba(255, 255, 0, 0.537);
+      color: white;
+      border-radius: 10px;
+      font-size: 18px;
+    }
+    .container .clear:hover {
+      background-color: gray;
+    }
+    h1 {
+      color: transparent;
+      background-clip: text;
+      font-size: 20px;
+      text-align: center;
+      background-image: linear-gradient(to right, blue, red);
+      margin-bottom: 10px;
+      text-decoration: underline;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>Making by panha</h1>
+      <form action="">
+        <input type="text" placeholder="Add new task..." class="input" />
+        <button class="add">add</button>
+      </form>
+      <!-- <ul class="list-container">
+        <li><i></i></li>
+      </ul> -->
+      <p class="count-item">item count</p>
+      <button class="clear" onclick="clearallTask()">clear</button>
+    </div>
+  </body>
+  <script src="todolis.js"></script>
+</html>
